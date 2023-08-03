@@ -5,7 +5,10 @@ const lost = document.getElementsByClassName("game-modal")[0];
 const hangmanImg = document.getElementById("hangman-img");
 const win = document.getElementsByClassName("game-modal-victory")[0];
 const correctDisplay = document.getElementById("correct-word-display");
-
+const btns = document.querySelectorAll("button");
+console.log(btns);
+const container = document.getElementById("container");
+const svg = document.querySelector("svg");
 // const easyModeSet = new Set();
 // const mediumMode = [];
 // const hardMode = [];
@@ -160,6 +163,31 @@ document.getElementById("mode-changer").onchange = function () {
   if (theme_mode === "black") {
     body.style.backgroundImage =
       "url(https://i.pinimg.com/originals/d3/7c/f6/d37cf6a8f0aea8a3183b5bdea812b5c7.gif)";
-    
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "100% 100%";
+    container.style.backgroundColor = "blue";
+    container.style.color = "white";
+    document.getElementById("btn2").style.backgroundColor = "blue";
+    document.getElementById("btn2").style.color = "white";
+    document.getElementById("imgs").src =
+      "https://www.iconsdb.com/icons/preview/white/arrow-91-xxl.png";
+    for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
+      document.getElementsByClassName("btn")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("btn")[i].style.color = "black";
+      document.getElementsByClassName("btn")[i].style.boxShadow = "none";
+      document.getElementsByClassName("btn")[i].style.hover = "gray ";
+    }
+    document
+      .getElementById("hangman-img")
+      .setAttribute("src", `images1/hangman-${mistakes}-white.svg`);
+  } else {
+    body.style.backgroundImage =
+      "url(https://i.pinimg.com/originals/e4/15/c4/e415c48c6387706cc02f92b09501cab5.gif)";
+    container.style.backgroundColor = "white";
+    container.style.color = "darkblue";
+    document.getElementById("btn2").style.backgroundColor = "white";
+    document
+      .getElementById("hangman-img")
+      .setAttribute("src", `images/hangman-${mistakes}.svg`);
   }
 };

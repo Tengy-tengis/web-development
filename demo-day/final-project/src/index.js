@@ -5,8 +5,10 @@ const lost = document.getElementsByClassName("game-modal")[0];
 const hangmanImg = document.getElementById("hangman-img");
 const win = document.getElementsByClassName("game-modal-victory")[0];
 const correctDisplay = document.getElementById("correct-word-display");
-const backgroundUrl =
-  "https://i.pinimg.com/originals/d3/7c/f6/d37cf6a8f0aea8a3183b5bdea812b5c7.gif";
+const btns = document.querySelectorAll("button");
+console.log(btns);
+const container = document.getElementById("container");
+const svg = document.querySelector("svg");
 // const easyModeSet = new Set();
 // const mediumMode = [];
 // const hardMode = [];
@@ -76,6 +78,7 @@ let randomWordLength = randomWord?.length;
 for (let i = 0; i < randomWordLength; i++) {
   let li = document.createElement("li");
   li.setAttribute("class", "letter");
+
   li.style.fontSize = "56px";
   document.getElementsByClassName("word-display")[0].appendChild(li);
 }
@@ -155,18 +158,41 @@ changePathButton2.addEventListener("click", () => {
   window.location.href = "start.html";
 });
 
-document
-  .getElementsByTagName("select")[0]
-  .addEventListener("change", function () {
-    let themeChange = document.getElementsByTagName("select")[0].value;
+document.getElementById("mode-changer").onchange = function () {
+  let theme_mode = document.getElementById("mode-changer").value;
 
-    document.querySelector("body").style.backgroundImage = themeChange;
-
-    if (themeChange === "dark") {
-      body;
-      body.setAttribute(
-        "src",
-        "https://i.pinimg.com/originals/d3/7c/f6/d37cf6a8f0aea8a3183b5bdea812b5c7.gif"
-      );
+  if (theme_mode === "black") {
+    body.style.backgroundImage =
+      "url(https://i.pinimg.com/originals/d3/7c/f6/d37cf6a8f0aea8a3183b5bdea812b5c7.gif)";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "100% 100%";
+    container.style.backgroundColor = "blue";
+    container.style.color = "white";
+    document.getElementById("btn2").style.backgroundColor = "blue";
+    document.getElementById("btn2").style.color = "white";
+    document.getElementById("imgs").style.color = "white";
+    for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
+      document.getElementsByClassName("btn")[i].style.backgroundColor = "white";
+      document.getElementsByClassName("btn")[i].style.color = "black";
+      document.getElementsByClassName("btn")[i].style.boxShadow = "none";
     }
-  });
+  } else if (theme_mode === "light") {
+    body.style.backgroundImage =
+      "url(https://i.pinimg.com/originals/e4/15/c4/e415c48c6387706cc02f92b09501cab5.gif)";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundSize = "100% 100%";
+    container.style.backgroundColor = "white";
+    container.style.color = "darkblue";
+    document.getElementById("imgs").src = "";
+    document.getElementById("btn2").style.backgroundColor = "white";
+    document.getElementById("btn2").style.color = "black";
+    document.getElementById("imgs").style.color = "black";
+    for (let i = 0; i < document.getElementsByClassName("btn").length; i++) {
+      document.getElementsByClassName("btn")[i].style.backgroundColor =
+        "#9bf6ff";
+      document.getElementsByClassName("btn")[i].style.boxShadow =
+        "3px 3px 3px #ababab";
+      document.getElementsByClassName("btn")[i].style.color = "black";
+    }
+  }
+};

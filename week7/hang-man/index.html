@@ -40,7 +40,7 @@
       </div>
     </div>
     <div id="big-div" style="display: flex; flex-direction: column">
-      <div>
+      <div style="display: flex">
         <button id="btn2" onclick="returnBtn()">
           <img
             src="https://cdn-icons-png.flaticon.com/512/93/93634.png"
@@ -50,6 +50,16 @@
 
           Return
         </button>
+        <div id="mode-div">
+          <select name="" id="mode-changer">
+            <option
+              value="url(https://i.pinimg.com/originals/e4/15/c4/e415c48c6387706cc02f92b09501cab5.gif)"
+            >
+              Light
+            </option>
+            <option value="black">Dark</option>
+          </select>
+        </div>
       </div>
       <div class="game-modal">
         <div class="content">
@@ -74,7 +84,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div id="container">
         <div class="hangman-box">
           <img id="hangman-img" src="images/hangman-0.svg" alt="hangman-img" />
           <h1>Hang Man Game</h1>
@@ -94,16 +104,7 @@
         </div>
       </div>
     </div>
-    <div id="mode-div">
-      <select name="" id="mode-changer">
-        <option
-          value="url(https://i.pinimg.com/originals/e4/15/c4/e415c48c6387706cc02f92b09501cab5.gif)"
-        >
-          Light
-        </option>
-        <option value="black">Dark</option>
-      </select>
-    </div>
+
     <script src="index-list.js"></script>
     <script src="index.js"></script>
     <script src="start.js"></script>
