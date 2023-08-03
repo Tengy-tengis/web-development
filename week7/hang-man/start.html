@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Up Menu</title>
+    <link rel="stylesheet" href="start.css" />
+  </head>
+  <body>
+    <div id="starting-menu">
+      <div id="content">
+        <img
+          id="img"
+          src="https://cdn-icons-png.flaticon.com/512/2241/2241387.png"
+          alt=""
+          height="200px"
+        />
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+          "
+        >
+          <div
+            id="title"
+            style="
+              font-size: 50px;
+              color: black;
+              text-align: center;
+              width: 400px;
+            "
+          >
+            Welcome to Hang-man game!
+          </div>
+          <div style="display: flex; gap: 15px">
+            <button id="btn1" onclick="startGame()">Start</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="start.js"></script>
+    <script src="index.js"></script>
+    <script src="index-list.js"></script>
+  </body>
+</html>

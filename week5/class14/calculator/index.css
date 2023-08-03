@@ -1,0 +1,261 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto";
+  background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExczlnNTFoemRxMDRubnJjeHRkbDY3bXMxdTNuZzNxOWFtbm9iN2o3ZyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sUOkBnwf8157cVGE57/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#calc {
+  height: 650px;
+  width: 361px;
+  border-radius: 45px;
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(https://i.scdn.co/image/ab67616d0000b2731533fe9c7ac34fc0c532bff5);
+  box-shadow: 8px 6px 5px red;
+  margin-right: 50px;
+}
+
+#upper {
+  height: 208px;
+  width: 359px;
+  border-bottom: 1px solid aliceblue;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#logo-img {
+  height: 80px;
+  width: 80px;
+  background-image: url(https://freelogopng.com/images/all_img/1664302686valorant-icon-png.png);
+  background-size: 80px;
+  border: none;
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+#lower {
+  height: 450px;
+  padding: 5px;
+  display: flex;
+}
+
+#left {
+  height: 420px;
+}
+
+.small-buttons {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  color: #bde0fe;
+  font-size: 48px;
+  font-style: normal;
+  line-height: normal;
+  margin: 2.5px;
+  background-color: #d62828;
+}
+#odd-buttons {
+  width: 160px;
+  height: 80px;
+  border-radius: 140px;
+  color: #bde0fe;
+  font-size: 48px;
+  font-style: normal;
+  line-height: normal;
+  border: none;
+  margin: 2.5px;
+  background-color: #d62828;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.top-buttons {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  margin: 2.5px;
+  background-color: #f07167;
+}
+
+#right {
+  height: 420px;
+}
+.right-buttons {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 48px;
+  font-style: normal;
+  line-height: normal;
+  margin: 2.5px;
+  background-color: #9e2a2b;
+}
+
+#display {
+  color: #fff;
+  font-size: 64px;
+  padding-right: 30px;
+  overflow-y: hidden;
+}
+
+.top-buttons:hover {
+  background-color: #800f2f;
+}
+
+#odd-buttons:hover {
+  background-color: #c9184a;
+}
+
+.right-buttons:hover {
+  background-color: #d00000;
+}
+
+button:hover {
+  background-color: #c9184a;
+}
+
+#logo {
+  color: aliceblue;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    padding: 0;
+    background-color: #1c1c1c;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #calc {
+    box-shadow: none;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 300px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    padding: 0;
+  }
+
+  #calc {
+    height: 500px;
+    width: 270px;
+    border-radius: 45px;
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  #upper {
+    height: 208px;
+    width: 280px;
+    border-bottom: 1px solid aliceblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .small-buttons {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    color: #bde0fe;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    margin: 1.5px;
+    background-color: #d62828;
+  }
+  #odd-buttons {
+    width: 120px;
+    height: 60px;
+    border-radius: 140px;
+    color: #bde0fe;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    border: none;
+    margin: 1.5px;
+    background-color: #d62828;
+    text-align: left;
+    padding-left: 25px;
+  }
+
+  .top-buttons {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    margin: 1.5px;
+    background-color: #f07167;
+  }
+
+  #right {
+    height: 420px;
+  }
+  .right-buttons {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    margin: 1.5px;
+    background-color: #9e2a2b;
+  }
+
+  #logo-img {
+    height: 60px;
+    width: 60px;
+    background-image: url(https://freelogopng.com/images/all_img/1664302686valorant-icon-png.png);
+    background-size: 60px;
+    margin-top: 100px;
+  }
+
+  #display {
+    color: #fff;
+    font-size: 32px;
+    padding-left: -100px;
+    width: 200px;
+    text-align: right;
+  }
+}

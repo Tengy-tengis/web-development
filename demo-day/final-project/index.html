@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hang Man</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Trirong"
+    />
+  </head>
+  <body>
+    <div id="starting-menu" style="display: flex; display: none">
+      <div id="content">
+        <img src="images/hangman-6.svg" alt="" />
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+          "
+        >
+          <div>
+            <h1 id="title" style="font-size: 30px; color: black">
+              Welcome to Hang-man game!
+            </h1>
+          </div>
+          <select value="Dificulty" name="Dificulty" id="drop-down">
+            <option value="none" selected disabled hidden>Dificulty</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+          <button id="btn1" onclick="startGame()">Start</button>
+        </div>
+      </div>
+    </div>
+    <div id="big-div" style="display: flex; flex-direction: column">
+      <div>
+        <button id="btn2" onclick="returnBtn()">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/93/93634.png"
+            alt=""
+            height="15px"
+          />
+
+          Return
+        </button>
+      </div>
+      <div class="game-modal">
+        <div class="content">
+          <img src="lost.gif" alt="gif" />
+          <h4>Game Over! You Lost!</h4>
+          <p>The correct word was: <b id="correct-word-display"></b></p>
+          <button id="refreshBtn">Play Again?</button>
+        </div>
+      </div>
+      <div class="game-modal-victory">
+        <div class="content">
+          <img src="victory.gif" alt="gif" />
+          <h4>Whoo! You won! Congratulations!!!!</h4>
+          <p>You got the word <b id="correct-word-display"></b></p>
+          <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <button id="nextBtn" onclick="nextBtn()">Next</button
+            ><button style="margin-left: 20px" onclick="returnBtn()">
+              Return?
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hangman-box">
+          <img id="hangman-img" src="images/hangman-0.svg" alt="hangman-img" />
+          <h1>Hang Man Game</h1>
+        </div>
+        <div class="game-box">
+          <ul class="word-display"></ul>
+
+          <h4 class="guessed-text">
+            incorrect guesses:
+            <div style="display: flex; justify-content: center">
+              <p id="mistake-display">0</p>
+              <p>/</p>
+              <p>6</p>
+            </div>
+          </h4>
+          <div class="keyboard"></div>
+        </div>
+      </div>
+    </div>
+    <div id="mode-div">
+      <select name="" id="mode-changer">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
+    <script src="index-list.js"></script>
+    <script src="index.js"></script>
+    <script src="start.js"></script>
+  </body>
+</html>

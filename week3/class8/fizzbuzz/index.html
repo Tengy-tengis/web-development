@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="body">
+    <div id="div1">
+      <img id="image" src="" alt="" />
+      <h1 id="title">Fizzbuzz</h1>
+      <input id="inp" type="number" />
+      <button id="btn">Send</button>
+    </div>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        let fizz_inp = document.getElementById("inp").value;
+        if (fizz_inp % 15 == 0) {
+          document.getElementById("title").innerHTML = "fizzbuzz";
+          document.getElementById("image").style.height = "400px";
+          document.getElementById("image").src =
+            "https://www.learnreligions.com/thmb/UQBR1aMuxD_kA3auGg5FAE_xViU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/woman-with-angel-wings-108263480-5837a4d33df78c6f6ae9fd7f.jpg";
+        } else if (fizz_inp % 3 == 0) {
+          document.getElementById("title").innerHTML = "fizz";
+          document.getElementById("image").style.height = "400px";
+          document.getElementById("image").src =
+            "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_0.jpg";
+        } else if (fizz_inp % 5 == 0) {
+          document.getElementById("title").innerHTML = "buzz";
+          document.getElementById("image").style.height = "400px";
+          document.getElementById("image").src =
+            "https://upload.wikimedia.org/wikipedia/en/b/b4/Buzz_Lightyear.png";
+        } else {
+          document.getElementById("title").innerHTML = "random number";
+          document.getElementById("image").style.height = "400px";
+          document.getElementById("image").src =
+            "https://1000logos.net/wp-content/uploads/2023/05/Laughing-Emoji.png";
+        }
+      });
+
+      document.getElementById("inp").style.border = "2px dashed black";
+      document.getElementById("title").style.fontFamily = "cursive";
+      document.getElementById("body").style.display = "flex";
+      document.getElementById("body").style.justifyContent = "center";
+      document.getElementById("body").style.alignContent = "center";
+      document.getElementById("body").style.height = "100vh";
+    </script>
+  </body>
+</html>

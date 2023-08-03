@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        firstName: "Tengis",
+        lastName: "Chinbat",
+        age: "15",
+        country: "Mongolia",
+        school: "GBS",
+        password: "12345678",
+        zodiacSign: "gemini",
+        birthDay: "June 1st, 2008",
+        fullName: function () {
+          console.log(this.firstName + " " + this.lastName);
+        },
+        loginInfo: function () {
+          console.log(this.firstName + " " + this.password);
+        },
+      };
+
+      console.log(person);
+      person.fullName();
+      person.loginInfo();
+    </script>
+  </body>
+</html>

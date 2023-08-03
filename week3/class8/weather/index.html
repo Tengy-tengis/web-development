@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="body">
+    <img id="image" src="" alt="" />
+
+    <h1 id="title">Hi</h1>
+    <input id="num-inp" type="number" placeholder="Put number here :>" />
+    <button id="send-btn">Send</button>
+
+    <script>
+      document
+        .getElementById("send-btn")
+        .addEventListener("click", function () {
+          let number_inp = document.getElementById("num-inp").value;
+          if (number_inp >= 100) {
+            document.getElementById("title").innerHTML = "Very hot weather";
+            document.getElementById("title").style.color = "red";
+            document.getElementById("image").src =
+              "https://static.vecteezy.com/system/resources/previews/000/551/126/original/vector-sun-icon.jpg";
+            document.getElementById("image").style.height = "100px";
+            document.getElementById();
+          } else if (70 <= number_inp && number_inp < 100) {
+            document.getElementById("title").innerHTML = "Warm weather";
+            document.getElementById("title").style.color = "orange";
+            document.getElementById("image").style.height = "100px";
+            document.getElementById("image").src =
+              "https://imechewebresources.blob.core.windows.net/imeche-web-content/images/default-source/pe-news/temp-2x.png?sfvrsn=8a146b11_0";
+          } else {
+            document.getElementById("title").innerHTML = "cold weather";
+            document.getElementById("title").style.color = "blue";
+            document.getElementById("image").style.height = "100px";
+            document.getElementById("image").src =
+              "https://media.cnn.com/api/v1/images/stellar/prod/221220154109-01-cold-weather-safety.jpg?c=original";
+          }
+        });
+    </script>
+  </body>
+</html>

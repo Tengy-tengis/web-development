@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="hello">Hello World</h1>
+    <button id="red">Click me to make the text Red</button>
+    <button id="blue">Click me to make the text Blue</button>
+    <button id="bigger">Click here for people who have bad eye sight</button>
+    <button id="normal">Click me to make it normal</button>
+
+    <div>
+      <h3 id="userTxt">Text anything you want :></h3>
+      <input id="userInp" type="text" />
+      <button id="userBtn">Submit</button>
+      <button id="userReset">Reset</button>
+    </div>
+
+    <div style="margin-top: 50px">
+      <input id="userInp2" type="number" placeholder="Enter cantimeter here" />
+      <button id="userBtn2">convert</button>
+      <h3 id="userTxt2">Inch will be here :></h3>
+    </div>
+  </body>
+  <script>
+    document.getElementById("red").addEventListener("click", function () {
+      document.getElementById("hello").style.color = "red";
+    });
+
+    document.getElementById("blue").addEventListener("click", function () {
+      document.getElementById("hello").style.color = "blue";
+    });
+
+    document.getElementById("bigger").addEventListener("click", function () {
+      document.getElementById("hello").style.fontSize = "200px";
+    });
+
+    document.getElementById("normal").addEventListener("click", function () {
+      document.getElementById("hello").style.fontSize = "40px";
+      document.getElementById("hello").style.color = "black";
+    });
+
+    document.getElementById("userBtn").addEventListener("click", function () {
+      let user_inp = document.getElementById("userInp").value;
+      document.getElementById("userTxt").innerHTML = user_inp;
+    });
+
+    document.getElementById("userReset").addEventListener("click", function () {
+      document.getElementById("userTxt").innerText =
+        "Text anything you want :>";
+    });
+
+    document.getElementById("userBtn2").addEventListener("click", function () {
+      let user_inp = document.getElementById("userInp2").value;
+      let inch = user_inp * 0.393701;
+      document.getElementById("userTxt2").innerHTML =
+        "The cm in inch is: " + inch;
+    });
+
+    document.getElementById("bigger").style.width = "400px";
+    document.getElementById("bigger").style.height = "100px";
+    document.getElementById("bigger").style.fontSize = "20px";
+
+    function lbtokg(pound) {
+      let kg = pound / 2.2;
+      console.log(pound + " pound is equal to " + kg + " kg");
+    }
+
+    function cmtoinch(cm) {
+      let inch = cm * 0.393701;
+      console.log(cm + " cm is equal to " + inch + " inch ");
+    }
+
+    lbtokg(100);
+    cmtoinch(100);
+  </script>
+</html>

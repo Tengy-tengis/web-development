@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <h3 id="userTxt">You result</h3>
+  <input id="userInp" type="number" placeholder="fahrenhreit" />
+  <button id="userBtn" onclick="result()">convert</button>
+
+  <h3 id="userTxt2">You result</h3>
+  <input id="userInp2" type="number" placeholder="celsius" />
+  <button id="userBtn2" onclick="result2()">convert</button>
+  <body>
+    <script>
+      //   function greet(name) {
+      //     console.log("Hello " + name + " :>");
+      //   }
+
+      //   greet("Tengis");
+      //   greet("Tonya");
+
+      //   function multi(number1, number2) {
+      //     console.log(number1 * number2);
+      //   }
+
+      //   multi(4, 6);
+      function fahrenTocel() {
+        let user_inp = document.getElementById("userInp").value;
+        let celsius = user_inp * 1.8 + 32;
+        return celsius;
+      }
+      function result() {
+        const test = fahrenTocel();
+        document.getElementById("userTxt").innerHTML =
+          "Your fahrenhreit in celsius is: " + test + "C";
+      }
+
+      function celTofahren() {
+        let user_inp2 = document.getElementById("userInp2").value;
+        let fahren = (user_inp2 - 32) / 1.8;
+        return fahren;
+      }
+
+      function result2() {
+        const test2 = celTofahren();
+        document.getElementById("userTxt2").innerHTML =
+          "Your celsius in fahrenhreit is: " + test2 + "F";
+      }
+    </script>
+  </body>
+</html>

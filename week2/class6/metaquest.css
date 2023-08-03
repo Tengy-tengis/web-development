@@ -1,0 +1,112 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+}
+
+#header {
+  width: 1440px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#first-header-div {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 34px;
+  font-size: 13px;
+}
+
+.category {
+  margin-left: 19px;
+  margin-bottom: 2px;
+}
+
+#odd {
+  margin-left: 30px;
+}
+
+.category:hover {
+  border-bottom-style: solid;
+  border-bottom-color: blue;
+}
+
+#support {
+  margin-right: 53px;
+  font-size: 14px;
+}
+
+#support:hover {
+  border-bottom-style: solid;
+  border-bottom-color: blue;
+}
+
+#myVideo {
+  height: 100%;
+  width: 100%;
+}
+
+#meta-quest-pro {
+  font-size: 64px;
+  color: aliceblue;
+}
+
+#info-under {
+  color: aliceblue;
+  font-size: 24px;
+  width: 360px;
+  height: 95.68px;
+  margin-top: -30px;
+}
+
+#infos {
+  position: absolute;
+  left: 0;
+  top: 290px;
+  margin-left: 32px;
+}
+
+#button {
+  width: 152.15px;
+  height: 52px;
+  border-radius: 50px;
+  color: aliceblue;
+  background-color: #1d65c1;
+  border: none;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+#button:hover {
+  background-color: #418af7;
+}
+
+#infos2 {
+  position: absolute;
+  left: 1020px;
+  top: 620px;
+  border: 1px solid black;
+  width: 385px;
+  height: 115.77px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 10px;
+}
+
+#text-infos2 {
+  width: 222.16px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#infos2-link {
+  color: black;
+  margin-left: -30px;
+}

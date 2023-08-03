@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const header = document.createElement("div");
+      header.setAttribute("id", "header");
+      header.style.height = "50px";
+      header.style.backgroundColor = "red";
+      header.style.width = "100% - 20px";
+      header.style.maxWidth = "1440px";
+
+      document.body.appendChild(header);
+      const body = document.getElementsByTagName("body")[0];
+      body.style.margin = "0px";
+      body.style.padding = "0px";
+
+      const header_div1 = document.createElement("div");
+      const header_logo = document.createElement("img");
+      header_logo.setAttribute(
+        "src",
+        "https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png"
+      );
+      header_logo.style.height = "50px";
+
+      const header_div2 = document.createElement("div");
+      header_div2.style.display = "flex";
+      header_div2.style.justifyContent = "space-between";
+      header_div2.style.alignItems = "center";
+      header_div2.style.width = "200px";
+      const header_link1 = document.createElement("a");
+      header_link1.setAttribute("href", "https://www.apple.com/");
+      header_link1.setAttribute("target", "_blank");
+      header_link1.style.textDecoration = "none";
+      header_link1.innerText = "Apple";
+      header_link1.style.color = "black";
+
+      const header_link2 = document.createElement("a");
+      header_link2.setAttribute("href", "https://www.youtube.com/");
+      header_link2.setAttribute("target", "_blank");
+      header_link2.style.textDecoration = "none";
+      header_link2.innerText = "Youtube";
+      header_link2.style.color = "black";
+
+      const header_link3 = document.createElement("a");
+      header_link3.setAttribute("href", "https://www.facebook.com/");
+      header_link3.setAttribute("target", "_blank");
+      header_link3.style.textDecoration = "none";
+      header_link3.innerText = "Facebook";
+      header_link3.style.color = "black";
+
+      header.style.display = "flex";
+      header.style.justifyContent = "space-between";
+      header.appendChild(header_div1);
+      header.appendChild(header_div2);
+      header.style.padding = "10px";
+      header_div1.appendChild(header_logo);
+      header_div2.appendChild(header_link1);
+      header_div2.appendChild(header_link2);
+      header_div2.appendChild(header_link3);
+    </script>
+  </body>
+</html>
